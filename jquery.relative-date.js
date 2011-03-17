@@ -26,8 +26,8 @@
 
             if (distance_in_minutes == 0) { return 'less than a minute ago'; }
             if (distance_in_minutes == 1) { return 'a minute ago'; }
-            if (distance_in_minutes < 45) { return distance_in_minutes + ' minutes ago'; }
-            if (distance_in_minutes < 90) { return 'about 1 hour ago'; }
+            if (distance_in_minutes < 60) { return distance_in_minutes + ' minutes ago'; }
+            if (distance_in_minutes < 120) { return '1 hour ' + (distance_in_minutes - 60) + ' minutes ago'; }
             if (distance_in_minutes < 1440) { return 'about ' + Math.floor(distance_in_minutes / 60) + ' hours ago'; }
             if (distance_in_minutes < 2880) { return '1 day ago'; }
             if (distance_in_minutes < 43200) { return Math.floor(distance_in_minutes / 1440) + ' days ago'; }
